@@ -1,9 +1,11 @@
 # Finding Nemo
 
 sentence = "I am Nemo"
+words = sentence.split() 
+position = words.index("Nemo") + 1
 
-if sentence.find("Nemo") == -1:
-    print("I found Nemo at [the order of the word you find nemo]!")    
+if "Nemo" in words: 
+    print("I found Nemo at " + str(position))    
         
 else:
     print("I can't find Nemo :(")
