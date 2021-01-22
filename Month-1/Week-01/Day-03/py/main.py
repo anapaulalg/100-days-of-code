@@ -3,8 +3,6 @@
 # skewers = ["--xo--x--ox--", "--xx--x--xx--", "--oo--o--oo--", "--xx--x--ox--", "--xx--x--ox--"]
 # --xo--x--ox-- --xx--x--xx-- --oo--o--oo-- --xx--x--ox-- --xx--x--ox--
 
-skewers = input("What are the skewers? ").split()
-
 def countNonVeg(skewers):
     numberOfNonVeg = 0
     for elem in skewers:
@@ -17,4 +15,6 @@ def countVeg(skewers):
     numberOfVeg = len(skewers) - numberOfNonVeg
     return numberOfVeg
 
-print("[" + str(countVeg(skewers)) + ", " + str(countNonVeg(skewers)) + "]")
+if __name__ == "__main__": 
+    skewers = input("What are the skewers? ").split()
+    print("[" + str(countVeg(skewers)) + ", " + str(countNonVeg(skewers)) + "]")
