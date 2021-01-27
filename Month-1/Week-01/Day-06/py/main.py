@@ -5,15 +5,13 @@ def isPrime(number):
     y = 1
     while y < number - 1:
         y = y + 1
-        allNumbers.append(y)
-    # print(allNumbers)    
+        allNumbers.append(y)  
 
     floatCount = 0
     for elem in allNumbers:
         if number % elem > 0:
             floatCount = floatCount + 1
     isPrime = floatCount == len(allNumbers)
-    # print(number)
     return isPrime
 
 def nextPrime(number):

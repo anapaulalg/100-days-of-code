@@ -1,17 +1,16 @@
 from main import nextPrime
 
-def thirteen():
+def thirteenNextPrime():
     assert nextPrime(13) == 13
 
-def fourteen():
+def fourteenNextPrime():
     assert nextPrime(14) == 17
 
-def thirtytwo():
+def thirtytwoNextPrime():
     assert nextPrime(32) == 37
 
-
 if __name__ == "__main__":
-    thirteen()
-    fourteen()
-    thirtytwo()
+    thirteenNextPrime()
+    fourteenNextPrime()
+    thirtytwoNextPrime()
     print('All tests passed')
