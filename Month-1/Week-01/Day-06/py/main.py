@@ -1,21 +1,29 @@
 # Next Prime
 
-x = 6
+def isPrime(number):
+    allNumbers = []
+    y = 1
+    while y < number - 1:
+        y = y + 1
+        allNumbers.append(y)
+    # print(allNumbers)    
 
-allNumbers = []
-y = 1
-while y < x - 1:
-    y = y + 1
-    allNumbers.append(y)
-print(allNumbers)
+    floatCount = 0
+    for elem in allNumbers:
+        if number % elem > 0:
+            floatCount = floatCount + 1
+    isPrime = floatCount == len(allNumbers)
+    # print(number)
+    return isPrime
 
-result = [x / elem for elem in allNumbers]
-print(result)
+def nextPrime(number):
+    prime = False
+    while prime == False:
+        prime = isPrime(number)        
+        if prime == False:
+            number = number + 1
+    return number
 
-floatCount = 0
-for elem in result:
-    if elem % 2 > 0:
-        floatCount = floatCount + 1
-
-isPrime = floatCount == len(result)
-print(isPrime)
+if __name__ == "__main__":
+    x = 90
+    print(nextPrime(x))
