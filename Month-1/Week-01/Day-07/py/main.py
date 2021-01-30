@@ -1,7 +1,5 @@
 # Merge Sorted Array
 
-
-
 def merge(nums1, nums2):
     countNums1 = len(nums1)
     countNums2 = 0
@@ -15,10 +13,9 @@ def merge(nums1, nums2):
     mergedArray = nums1
     mergedSorted = sorted(mergedArray)
     print(mergedSorted)
+    return mergedSorted
 
 if __name__ == "__main__":
     nums1 = [1,2,3,0,0,0]
     nums2 = [2,5,6]
     merge(nums1, nums2)
-
-
