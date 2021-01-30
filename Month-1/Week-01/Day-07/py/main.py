@@ -15,9 +15,10 @@ def merge(nums1, nums2):
                 print(countNums1)
                 print("Nums2")
                 print(countNums2)
-                nums1[i + countNums2] = nums2[j]
+                nums1[i] = nums2[j]
                 nums2.pop(j)
                 countNums2 = countNums2 + 1
                 print(nums1)
+                break
 
 merge(nums1, nums2)
