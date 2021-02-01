@@ -2,22 +2,24 @@
 
 def letterCombinations(firstList, secondList):
     i = 0
+    result = []
     while i < len(firstList):
         j = 0
         while j < len(secondList):     
-            result = firstList[i] + secondList[j]
+            result.append(firstList[i] + secondList[j]) 
             j += 1 
-            print(result)
         i += 1
+    print(result)
     return result
 
 if __name__ == "__main__":
-    two = ['a', 'b', 'c']
-    three = ['d', 'e', 'f']
-    four = ['g', 'h', 'i']
-    five = ['j', 'k', 'l']
-    six = ['m', 'n', 'o']
-    seven = ['p', 'q', 'r', 's']
-    eight = ['t', 'u', 'v']
-    nine = ['w', 'x', 'y', 'z']
-    letterCombinations(two, three)
+    lists = [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i'], ['j', 'k', 'l'], ['m', 'n', 'o'], ['p', 'q', 'r', 's'], ['t', 'u', 'v'],['w', 'x', 'y', 'z']]
+    digit2 = lists[0]
+    digit3 = lists[1]
+    digit4 = lists[2]
+    digit5 = lists[3]
+    digit6 = lists[4]
+    digit7 = lists[5]
+    digit8 = lists[6]
+    digit9 = lists[7]
+    letterCombinations(digit2, digit3)
