@@ -28,7 +28,6 @@ Output: 9
 - `n == height.length`
 - `0 <= n <= 3 * 104`
 - `0 <= height[i] <= 105`
-
 ---
 
 ### Notes
