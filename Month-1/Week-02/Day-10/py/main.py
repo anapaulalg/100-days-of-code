@@ -8,6 +8,6 @@ def tress(n):
     for i in range(2, n + 1):
         for j in range(0, i):
             numbers[i] += numbers[j]*numbers[i - j - 1]
-    return numbers
+    return numbers[-1]
 
 print(tress(4))
