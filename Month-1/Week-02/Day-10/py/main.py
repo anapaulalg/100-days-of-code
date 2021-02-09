@@ -1,6 +1,6 @@
 # Unique Binary Search Trees
 
-def tress(self, n):
+def tress(n):
     if n < 2:
         return 1
     numbers = [0] * (n + 1)
@@ -10,4 +10,4 @@ def tress(self, n):
             numbers[i] += numbers[j]*numbers[i - j - 1]
     return numbers
 
-print(tress(1, 4))
+print(tress(4))
