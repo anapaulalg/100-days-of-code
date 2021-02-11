@@ -1,21 +1,37 @@
 # Restore IP Addresses
 
-s = "233222777111"
+s = "192333222111"
 
 def ipAddresses(s):
+    finalIp = []
     if len(s) < 4:
-        print('This cannot be a valid IP')
+        return "This cannot be a valid IP"
     else:
-        firstPartIP = int(s[:3])
-        if firstPartIP <= 255:
-            print(str(firstPartIP) + '.')
+        if len(s) == 4:
+            for i in s:
+                finalIp.append(i)
         else:
-            firstPartIP = int(s[:2])
-            print(str(firstPartIP) + '.')
-        
-ipAddresses(s)
-firstPartIP = int(s[:3])
-secondPartIP = int(s[3:6])
-thridPartIP = int(s[6:9])
-fourthPartIP = int(s[9:])
-print(str(firstPartIP) + '.' + str(secondPartIP) + '.' + str(thridPartIP) + '.' + str(fourthPartIP))
+            while len(finalIp) < 4:
+                segmentSize = 3
+                segmentsLeft = 4 - len(finalIp)
+                segmentFactor = len(s) / segmentsLeft
+                
+                if (s[0] == "0"):
+                        segmentSize = 1
+                else:
+                    while segmentSize > len(s) or (segmentFactor <= 1.0 and segmentsLeft > len(s)):
+                        segmentSize = segmentSize - 1
+                        segmentFactor = segmentsLeft / segmentSize
+
+                ipSegment = int(s[:segmentSize])
+                if ipSegment <= 255:
+                    finalIp.append(str(ipSegment))
+                    s = s[segmentSize:]
+                else:
+                    ipSegment = int(s[:2])
+                    finalIp.append(str(s[:segmentSize - 1]))
+                    s = s[segmentSize - 1:]
+                
+    return ".".join(finalIp)
+            
+print(ipAddresses(s))
