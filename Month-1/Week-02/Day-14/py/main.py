@@ -1,11 +1,12 @@
 # The Karaca's Encryption Algorithm
 
-word = "banana"[::-1]
-
 def encrypt(word):
+    word = word[::-1]
     newword = word.replace("a", "0").replace("e", "1").replace("i", "2").replace("o", "2").replace("u", "3")
-    aca = "aca"
-    print(newword + aca)
-    return encrypt
+    result = newword + "aca"
+    print(result)
+    return result
 
-encrypt(word)
+if __name__ == "__main__":
+    word = "banana"
+    encrypt(word)
