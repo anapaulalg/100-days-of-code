@@ -7,7 +7,7 @@ def testTwo():
     assert CanFit([9, 7, 20], 2) == False
 
 def testThree():
-    assert CanFit([2, 2, 12], 2) == False
+    assert CanFit([2, 2, 12], 3) == True
 
 if __name__ == "__main__":
     testOne()
