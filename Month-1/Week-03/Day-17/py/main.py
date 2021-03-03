@@ -1,20 +1,18 @@
 # Prison Break
 
-prision = [1, 1, 1]
+prison = [1, 1, 0, 0, 0, 1, 0]
 
-def prisionBreak(prision):
+def prisonBreak(prison):
     n = 0
-    for i in prision:
-        if prision[0] == 0:
-            n = 0 
-        elif prision[i] == prision[i+1]:
-            n = 1
-        else:
+    for i in range(0, len(prison)):
+        print(i)
+        if i == 0 and prison[i] == 0:
+            n = 0
+            break
+        elif prison[i] == 1:            
             n = n + 1
-
-    newPrision = [0 if i==1 else 1 for i in prision]
-    print(newPrision)
-    
+            prison = [0 if i==1 else 1 for i in prison]
+            print(prison)
     return n
 
-print(prisionBreak(prision))
+print(prisonBreak(prison))
