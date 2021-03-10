@@ -9,22 +9,34 @@ Return the letter that was added to t.
 
 ### Examples
 
-Example 1:
+**Example 1:**
+
+```text
 Input: s = "abcd", t = "abcde"
 Output: "e"
 Explanation: 'e' is the letter that was added.
+```
 
-Example 2:
+**Example 2:**
+
+```text
 Input: s = "", t = "y"
 Output: "y"
+```
 
-Example 3:
+**Example 3:**
+
+```text
 Input: s = "a", t = "aa"
 Output: "a"
+```
 
-Example 4:
+**Example 4:**
+
+```text
 Input: s = "ae", t = "aea"
 Output: "a"
+```
  
 
 ### Constraints:
